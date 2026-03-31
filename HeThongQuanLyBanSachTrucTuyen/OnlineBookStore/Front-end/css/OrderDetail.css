@@ -1,0 +1,85 @@
+/* ====================================Order detail========================= */
+
+.container {
+  background-color: #fff;
+  font-size: 1.5rem;
+  padding: 5rem;
+  margin: 3rem 0;
+}
+
+h2,
+h3 {
+  color: #333;
+}
+
+.order-info,
+.shipping-info,
+.summary {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-back:hover {
+  background: #0056b3;
+}
+
+/* ========================= Footer ========================= */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #007bff;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.back-button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-back:hover {
+  background-color: #0056b3;
+}

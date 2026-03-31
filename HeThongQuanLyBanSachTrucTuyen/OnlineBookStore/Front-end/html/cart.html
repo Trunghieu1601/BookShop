@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhà sách Online</title>
+    <!-- Font Awesome (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/commont.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header class="header">
+        <div class="header__main-content">
+          <div class="header__body">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="../html/index.html">
+                <img src="../img/logo.svg" alt="Nhà sách Online" />
+              </a>
+              <span>Nhà sách Online</span>
+            </div>
+            <!-- Search bar -->
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm kiếm sách..."
+            />
+            <!-- Nav bar -->
+            <nav class="nav">
+              <div class="nav__container">
+                <div class="nav__item nav__item--dropdown">
+                  <div class="nav__dropdown-btn">Danh mục ▼</div>
+                  <div class="nav__dropdown-content" id="category-list">
+                    <!-- Danh mục sẽ được render tự động bằng JS -->
+                  </div>
+                </div>
+                <div class="nav__item">
+                  <a href="../html/cart.html" class="nav__link"> Giỏ hàng </a>
+                </div>
+              </div>
+            </nav>
+            <!-- Login -->
+            <div class="login">
+              <div class="login__dropdown" id="login-section">
+                <!-- Nội dung sẽ được render bằng JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Main content -->
+      <main class="main">
+        <div class="main__content cart-page">
+          <div class="main-content">
+            <h1 class="cart__title">
+              Giỏ Hàng (<span id="cart-count">0</span> sản phẩm)
+            </h1>
+          </div>
+          <div class="cart-actions">
+            <input type="checkbox" id="select-all" />
+            <label for="select-all">Chọn tất cả</label>
+            <button id="delete-selected">Xóa mục đã chọn</button>
+          </div>
+
+          <div class="main-cart">
+            <div class="cart__list" id="cart-list">
+              <!-- Danh sách giỏ hàng sẽ được render động -->
+            </div>
+            <div class="cart__summary">
+              <h2 class="cart__summary-title">
+                Thành tiền: <span id="cart-total">0 đ</span> (gồm VAT)
+              </h2>
+              <button class="cart__checkout-btn" id="checkout-btn">
+                Thanh toán
+              </button>
+              <p class="cart__summary-note">
+                Giảm giá trên web chỉ áp dụng cho bạn lẻ
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="footer__main-content">
+          <p class="footer__copyright">
+            © 2025 Nhà sách Online. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Liên kết tới file JavaScript riêng -->
+    <script src="../js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

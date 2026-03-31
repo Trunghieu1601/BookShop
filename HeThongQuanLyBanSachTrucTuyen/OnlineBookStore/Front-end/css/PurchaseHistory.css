@@ -1,0 +1,114 @@
+/* ========================== lich su don hang ====================== */
+
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background: #007bff;
+  padding: 20px;
+  color: #fff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+/* ==========================lich su don hang content ====================== */
+.content {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafafa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: #007bff;
+  color: white;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-size: 16px;
+}
+
+tbody tr:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+td a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  th,
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* ========================= Footer ========================= */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #007bff;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

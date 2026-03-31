@@ -1,0 +1,292 @@
+.input__class {
+  max-width: none !important;
+  padding: 0.8rem !important;
+  font-size: 1.6rem !important;
+  border-radius: 0.5rem !important;
+  width: 100% !important;
+}
+/* ========================= Trang Thanh Toán ========================= */
+.checkout {
+  max-width: 60rem;
+  margin: 3rem auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.checkout__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #d32f2f;
+}
+
+.checkout__section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.checkout__section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* ========================= Form Nhập Thông Tin ========================= */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus {
+  border-color: #3290a6;
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(50, 144, 166, 0.5);
+}
+
+/* ========================= Phương Thức Thanh Toán ========================= */
+.payment-options label {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.payment-options input {
+  margin-right: 1rem;
+}
+
+/* ========================= Danh Sách Sản Phẩm ========================= */
+.checkout__order-summary {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.checkout__order-summary p {
+  font-size: 1.6rem;
+}
+
+#order-items {
+  margin-bottom: 1rem;
+}
+
+/* ========================= Tổng Tiền ========================= */
+.checkout__cost-details {
+  text-align: right;
+  padding: 1.5rem; /* Thêm padding để tạo khoảng cách với mép */
+  border-top: 1px solid #e0e0e0; /* Đường kẻ phân cách với danh sách sản phẩm */
+}
+
+/* Các dòng chi tiết (subtotal, shipping, discount) */
+.checkout__cost-details p {
+  font-size: 1.6rem; /* Kích thước chữ vừa phải cho các dòng chi tiết */
+  margin-bottom: 1rem; /* Khoảng cách giữa các dòng */
+  color: #161313; /* Màu gần đen, dễ đọc */
+  display: flex; /* Dùng flex để căn chỉnh nhãn và giá trị */
+  justify-content: space-between; /* Nhãn bên trái, giá trị bên phải */
+}
+
+/* Tổng tiền cuối cùng */
+.checkout__cost-details .checkout__total {
+  font-size: 2rem; /* Lớn hơn để nhấn mạnh */
+  font-weight: bold;
+  color: #d32f2f; /* Màu đỏ nổi bật */
+  margin-top: 1.5rem; /* Khoảng cách lớn hơn với các dòng trên */
+  border-top: 1px dashed #d32f2f; /* Đường kẻ phân cách nhẹ */
+  padding-top: 1rem; /* Khoảng cách phía trên đường kẻ */
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .checkout__cost-details {
+    padding: 1rem;
+  }
+
+  .checkout__cost-details p {
+    font-size: 1.4rem; /* Giảm kích thước chữ trên mobile */
+    flex-direction: column; /* Chuyển sang dạng cột để dễ đọc */
+    text-align: left; /* Căn trái cho nhãn và giá trị */
+  }
+
+  .checkout__cost-details .checkout__total {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+  }
+}
+/* ========================= Button Thanh Toán ========================= */
+.checkout__actions {
+  text-align: center;
+}
+
+.place-order-btn {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.place-order-btn:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* ========================= Danh Sách Sản Phẩm ========================= */
+.checkout__order-summary {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.checkout__order-summary p {
+  font-size: 1.6rem;
+}
+
+#order-items {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ========================= Mỗi sản phẩm trong danh sách ========================= */
+.order-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+}
+
+.order-item img {
+  width: 8rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.order-item__info {
+  flex: 1;
+}
+
+.order-item__title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.order-item__price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.order-item__quantity {
+  font-size: 1.4rem;
+  color: #666;
+}
+
+/* ========================= Responsive ========================= */
+@media (max-width: 768px) {
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .checkout {
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  .checkout__btn {
+    width: 100%;
+  }
+}
+
+/* ========================= Mã Giảm Giá (Dropdown) ========================= */
+#voucher-select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#voucher-select:focus {
+  border-color: #3290a6;
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(50, 144, 166, 0.5);
+}
+
+/* ========================= Dropdown Chọn Tỉnh/Thành Phố ========================= */
+#province {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#province:focus {
+  border-color: #3290a6;
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(50, 144, 166, 0.5);
+}
+
+/* ========================= Phí vận chuyển ========================= */
+.checkout__shipping {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* ========================= Footer ========================= */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #007bff;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+}

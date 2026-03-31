@@ -1,0 +1,268 @@
+/* ========================= Main Top: Mã Giảm Giá ========================= */
+.main-top {
+  background: linear-gradient(90deg, #ffecd2, #fcb69f);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.main-top__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #d32f2f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem 0;
+  border-bottom: 3px solid #d32f2f;
+  display: inline-block;
+}
+
+.discount-code__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.discount-code__item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  width: 25rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.discount-code__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.discount-code__code {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4d4d;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.discount-code__amount {
+  font-size: 1.6rem;
+  color: #333;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.discount-code__date {
+  font-size: 1.4rem;
+  color: #888;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.discount-code__save-btn {
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.discount-code__save-btn:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  transform: scale(1.05);
+}
+
+/* ========================= Main Bottom: Danh sách sách giảm giá ========================= */
+.main-bottom {
+  padding: 2rem;
+}
+
+/* ======================================== TITLE ========================================= */
+.book-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.book-list__title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #d32f2f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem 0;
+  border-bottom: 3px solid #d32f2f;
+  display: inline-block;
+}
+
+/* ======================================== Sort ============================================= */
+.filter-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#sort-discount-books {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* ======================================Book List========================================= */
+.new-books__book-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.book-item {
+  width: 23%;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.book-item a {
+  text-decoration: none;
+}
+
+.book-item:hover {
+  box-shadow: 0 0 2rem rgba(33, 37, 41, 0.3);
+  text-shadow: 0 0 0.5rem rgba(59, 57, 57, 0.2);
+  transform: translateY(-5px);
+}
+
+.book-item img {
+  width: 100%;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.book-name {
+  font-size: 1.6rem;
+  margin: 1rem 0.5rem;
+  color: #333;
+  line-height: 1.4;
+  font-weight: bold;
+  max-height: 4.48rem;
+  min-height: 4.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #2c3e50;
+  word-break: break-all;
+}
+
+.Gia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.GiaHienTai {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+.discount {
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.GiaCu {
+  font-size: 12px;
+  color: #888;
+  text-decoration: line-through;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.DaBan {
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 0 0 8px 8px;
+  display: block;
+}
+
+/* Responsive cho danh sách sách */
+@media (max-width: 768px) {
+  .book-item {
+    width: 48%;
+  }
+  .book-item {
+    width: 100%;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-btn {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-btn:hover {
+  background-color: #e9ecef;
+}
+
+/* ========================= Footer ========================= */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #007bff;
+  color: white;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

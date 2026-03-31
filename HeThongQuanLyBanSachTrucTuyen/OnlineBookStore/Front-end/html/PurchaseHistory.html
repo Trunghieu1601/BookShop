@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch sử mua hàng</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/Admin.css" />
+    <link rel="stylesheet" href="../css/PurchaseHistory.css" />
+    <!-- CSS chung -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__main-content">
+        <div class="header__body">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="../html/index.html">
+              <img src="../img/logo.svg" alt="Nhà sách Online" />
+            </a>
+            <span>Nhà sách Online</span>
+          </div>
+          <!-- Search bar -->
+          <input type="text" id="search-input" placeholder="Tìm kiếm sách..." />
+          <!-- Nav bar -->
+          <nav class="nav">
+            <div class="nav__container">
+              <div class="nav__item nav__item--dropdown">
+                <div class="nav__dropdown-btn">Danh mục ▼</div>
+                <div class="nav__dropdown-content" id="category-list">
+                  <!-- Danh mục sẽ được render tự động bằng JS -->
+                </div>
+              </div>
+              <div class="nav__item">
+                <a href="../html/cart.html" class="nav__link"> Giỏ hàng </a>
+              </div>
+            </div>
+          </nav>
+          <!-- Login -->
+          <div class="login">
+            <div class="login__dropdown" id="login-section">
+              <!-- Nội dung sẽ được render bằng JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li><a href="user.html">Thông tin tài khoản</a></li>
+          <li class="active">
+            <a href="PurchaseHistory.html">Lịch sử mua hàng</a>
+          </li>
+          <li><a href="ChangePassword.html">Đổi mật khẩu</a></li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>LỊCH SỬ MUA HÀNG</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Mã đơn hàng</th>
+              <th>Ngày mua</th>
+              <th>Tổng tiền</th>
+              <th>Trạng thái</th>
+              <th>Chi tiết</th>
+            </tr>
+          </thead>
+          <tbody id="order-table-body">
+            <!-- Dữ liệu sẽ được thêm động bằng JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__main-content">
+        <p class="footer__copyright">
+          © 2025 Nhà sách Online. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/SearchPurchaseHistory.js"></script>
+  </body>
+</html>

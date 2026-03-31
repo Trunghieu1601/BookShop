@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/Admin.css" />
+    <link rel="stylesheet" href="../css/Manage-coupon-codes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <div class="container__body">
+      <!-- Header -->
+      <header class="header">
+        <div class="header__main-content">
+          <div class="header__body">
+            <!-- Logo -->
+            <div class="logo">
+              <a href="../html/index.html">
+                <img src="../img/logo.svg" alt="Nhà sách Online" />
+              </a>
+              <span>Nhà sách Online</span>
+            </div>
+            <!-- Search bar -->
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Tìm kiếm sách..."
+            />
+            <!-- Nav bar -->
+            <nav class="nav">
+              <div class="nav__container">
+                <div class="nav__item nav__item--dropdown">
+                  <div class="nav__dropdown-btn">Danh mục ▼</div>
+                  <div class="nav__dropdown-content" id="category-list">
+                    <!-- Danh mục sẽ được render tự động bằng JS -->
+                  </div>
+                </div>
+                <div class="nav__item">
+                  <a href="../html/cart.html" class="nav__link"> Giỏ hàng </a>
+                </div>
+              </div>
+            </nav>
+            <!-- Login -->
+            <div class="login">
+              <div class="login__dropdown" id="login-section">
+                <!-- Nội dung sẽ được render bằng JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- Container -->
+        <div class="container">
+          <div class="sidebar">
+            <ul>
+              <li><a href="../html/Admin.html">Dashboard</a></li>
+              <li>
+                <a href="../html/order-management.html">Quản lý Đơn hàng</a>
+              </li>
+              <li><a href="../html/book-management.html">Quản lý Sách</a></li>
+              <li>
+                <a href="../html/User-Management.html">Quản lý Người dùng</a>
+              </li>
+              <li>
+                <a href="../html/Manage-reviews.html">Quản lý Đánh giá</a>
+              </li>
+              <li class="active">
+                <a href="../html/Manage-coupon-codes.html"
+                  >Quản lý Mã Giảm giá</a
+                >
+              </li>
+              <li><a href="../html/Revenue.html">Tổng Doanh Thu</a></li>
+            </ul>
+          </div>
+
+          <div class="content" id="admin-content">
+            <h2>Quản lý Mã Giảm Giá</h2>
+            <button id="add-discount-btn">Thêm Mã Giảm Giá</button>
+            <table id="discount-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Mã</th>
+                  <th>Số tiền giảm</th>
+                  <th>Ngày bắt đầu</th>
+                  <th>Ngày kết thúc</th>
+                  <th>Giới hạn sử dụng</th>
+                  <th>Đã dùng</th>
+                  <th>Đã gán</th>
+                  <th>Hành động</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="discount-modal" class="modal">
+          <div class="modal-content">
+            <h3 id="form-title">Thêm Mã Giảm Giá</h3>
+            <form id="discount-form">
+              <label for="code">Mã giảm giá:</label>
+              <input type="text" id="code" required />
+
+              <label for="discountAmount">Số tiền giảm (VNĐ):</label>
+              <input
+                type="number"
+                id="discountAmount"
+                step="1000"
+                min="0"
+                required
+              />
+
+              <label for="startDate">Ngày bắt đầu:</label>
+              <input type="datetime-local" id="startDate" required />
+
+              <label for="endDate">Ngày kết thúc:</label>
+              <input type="datetime-local" id="endDate" required />
+
+              <label for="usageLimit"
+                >Giới hạn sử dụng (để trống nếu không giới hạn):</label
+              >
+              <input type="number" id="usageLimit" min="1" />
+
+              <div class="form-buttons">
+                <button type="submit">Lưu</button>
+                <button type="button" id="cancel-discount-btn">Hủy</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__main-content">
+          <p class="footer__copyright">
+            © 2025 Nhà sách Online. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/Manage-coupon-codes.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

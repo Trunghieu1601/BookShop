@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styleLogin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button id="signInTab" class="tab active">Sign In</button>
+        <button id="signUpTab" class="tab">Sign Up</button>
+      </div>
+
+      <!-- Sign In Form -->
+      <div id="signInForm" class="form-content">
+        <form id="sign-in-form">
+          <h2>Welcome Back!</h2>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              id="sign-in-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="sign-in-password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <a href="forgotPassword.html" class="forgot-link"
+            >Forgot your password?</a
+          >
+          <button type="submit" class="btn">Sign In</button>
+          <button
+            type="button"
+            onclick="location.href='../html/index.html'"
+            class="btn secondary"
+          >
+            Back Home
+          </button>
+        </form>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div id="signUpForm" class="form-content hidden">
+        <form id="sign-up-form">
+          <h2>Create Account</h2>
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input
+              type="text"
+              id="sign-up-name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input
+              type="email"
+              id="sign-up-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="sign-up-password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <button
+            type="button"
+            onclick="location.href='../html/index.html'"
+            class="btn secondary"
+          >
+            Back Home
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const signInTab = document.getElementById("signInTab");
+      const signUpTab = document.getElementById("signUpTab");
+      const signInForm = document.getElementById("signInForm");
+      const signUpForm = document.getElementById("signUpForm");
+
+      signInTab.addEventListener("click", () => {
+        signInForm.classList.remove("hidden");
+        signUpForm.classList.add("hidden");
+        signInTab.classList.add("active");
+        signUpTab.classList.remove("active");
+      });
+
+      signUpTab.addEventListener("click", () => {
+        signUpForm.classList.remove("hidden");
+        signInForm.classList.add("hidden");
+        signUpTab.classList.add("active");
+        signInTab.classList.remove("active");
+      });
+    </script>
+
+    <script src="../js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
